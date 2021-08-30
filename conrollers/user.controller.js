@@ -27,7 +27,7 @@ class UserController {
         const user = await UserModel.findOne({ id: req.params.id });
 
         if (!user) {
-            throw new HttpException(404, 'User no found')
+            throw new HttpException(404, 'User not found')
         }
 
         const { password, ...userWithoutPassword } = user;
