@@ -8,7 +8,7 @@ class TaskModel {
     find = async (params = {}) => {
         let sql = `SELECT * FROM ${this.tableName}`;
 
-        if (!Object.keys(parama).length) {
+        if (!Object.keys(params).length) {
             return await query(sql)
         }
 
